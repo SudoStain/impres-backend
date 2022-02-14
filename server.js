@@ -41,8 +41,4 @@ app.get("/api/csrf-token", (req, res) => {
 // port
 // const port = process.env.PORT || 8000;
 
-var server = app.listen(process.env.PORT || 8000,  '0.0.0.0', function () {
-  var port = server.address().port
-  console.log('Express is Working on port:' + port)
-  
-})
+app.listen(process.env.PORT || 8000, () => console.log('Server is running on port 8000 said it'));
