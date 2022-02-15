@@ -9,6 +9,8 @@ require("dotenv").config();
 
 const csrfProtection = csrf({ cookie: true });
 
+const PORT = process.env.PORT
+
 // create express app
 const app = express();
 
@@ -41,4 +43,4 @@ app.get("/api/csrf-token", (req, res) => {
 // port
 // const port = process.env.PORT || 8000;
 
-app.listen(process.env.PORT , () => console.log('Server is running on port 8000 said it'));
+app.listen(PORT , () => console.log('Server is running on port 8000 said it'));
